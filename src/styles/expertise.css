@@ -1,0 +1,254 @@
+.expertise {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  padding: var(--section-padding) 0;
+  border-top: 1px solid var(--border-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.expertise-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.expertise-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.expertise-subtitle .gold {
+  color: var(--accent-gold);
+}
+
+.expertise-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted-gray);
+  max-width: 400px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech-pill {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-pill);
+  color: var(--muted-gray);
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.tech-pill:hover {
+  background: var(--text-dark);
+  color: var(--bg-dark);
+  border-color: var(--text-dark);
+}
+
+.expertise-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  gap: 20px;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.service-card:hover,
+.service-card.active {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.service-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: var(--accent-gold);
+}
+
+.service-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.service-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+.service-link {
+  color: var(--muted-gray);
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: var(--accent-gold);
+}
+
+.service-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted-gray);
+}
+
+.service-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.service-tag {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-gray);
+  padding: 4px 8px;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+}
+
+/* Floating badge icons */
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.floating-icon.gsap {
+  background: #0ae448;
+  color: #000;
+}
+
+.floating-icon.js {
+  background: #f7df1e;
+  color: #000;
+}
+
+.floating-icon.react {
+  background: #61dafb;
+  color: #000;
+}
+
+.floating-icon.html {
+  background: #e34f26;
+  color: #fff;
+}
+
+.floating-icon.css {
+  background: #1572b6;
+  color: #fff;
+}
+
+.floating-icon.firebase {
+  background: #ffca28;
+  color: #000;
+}
+
+.floating-icon.lenis {
+  background: #fff;
+  color: #000;
+}
+
+.section-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--muted-gray);
+  margin-top: 60px;
+}
+
+.section-number span {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 968px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .floating-icons {
+    display: none;
+  }
+}
