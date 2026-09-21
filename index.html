@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Waqas Bhatti — Creative Developer</title>
+<title>yashodya rathnayaka portfolio</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Caveat:wght@400;700&family=Syne:wght@700;800;900&display=swap');
@@ -802,7 +802,7 @@
   .about {
     background: #0D0D0D;
     color: #F2EEE9;
-    padding: 60px 5% 40px;
+    padding: 10px 5% 40px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -810,8 +810,8 @@
   }
 
   .about-header {
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: left;
+    margin-bottom: 5px;
   }
 
   .about-title {
@@ -821,12 +821,12 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #6B1E2E;
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
 
   .about-grid {
     display: grid;
-    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-columns: 1.4fr 0.6fr;
     gap: 50px;
     align-items: center;
   }
@@ -1049,10 +1049,11 @@
   .expertise {
     background: #0D0D0D;
     color: #F2EEE9;
-    padding: 100px 5%;
+    padding: 10px 5% 100px;
     border-top: 1px solid rgba(107,30,46,0.2);
     position: relative;
     overflow: hidden;
+    text-align: center;
   }
 
   .floating-logos {
@@ -1104,6 +1105,7 @@
     line-height: 1.7;
     color: #9A9292;
     margin-bottom: 16px;
+    text-align: left;
   }
 
   .tech-pills {
@@ -1111,6 +1113,7 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
+    justify-content: flex-start;
   }
 
   .tech-pill {
@@ -1171,58 +1174,328 @@
     font-size: 14px;
   }
 
+
+  /* GITHUB ACTIVITY */
+  .github-section {
+    background: #0D0D0D;
+    color: #F2EEE9;
+    padding: 100px 5%;
+  }
+
+  .github-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .github-header h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .github-header h2 span {
+    color: #6B1E2E;
+  }
+
+  .github-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #9A9292;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+  }
+
+  .github-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9A9292;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .github-link:hover {
+    color: #6B1E2E;
+  }
+
+  .github-calendar-wrapper {
+    background: #351018;
+    border: 1px solid rgba(107,30,46,0.25);
+    border-radius: 16px;
+    padding: 28px 30px 22px;
+    overflow: hidden;
+  }
+
+  .github-loading {
+    text-align: center;
+    padding: 60px;
+    color: #9A9292;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  .github-graph-area {
+    display: flex;
+    gap: 0;
+  }
+
+  .github-day-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-right: 10px;
+    justify-content: space-between;
+    padding-top: 22px;
+    min-width: 30px;
+  }
+
+  .github-day-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #9A9292;
+    letter-spacing: 0.02em;
+    height: 11px;
+    line-height: 11px;
+  }
+
+  .github-graph-right {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .github-months-row {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 4px;
+    height: 20px;
+  }
+
+  .github-month-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #9A9292;
+    letter-spacing: 0.02em;
+  }
+
+  .github-weeks-row {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .github-week-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .github-day {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 2px;
+    background: #1a0a0d;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .github-day:hover {
+    outline: 2px solid rgba(242,238,233,0.35);
+    outline-offset: 1px;
+  }
+
+  .github-day.level-0 { background: #1a0a0d; }
+  .github-day.level-1 { background: #3d1520; }
+  .github-day.level-2 { background: #6B1E2E; }
+  .github-day.level-3 { background: #9e3048; }
+  .github-day.level-4 { background: #c94562; }
+
+  .github-day-tip {
+    display: none;
+    position: fixed;
+    background: #F2EEE9;
+    color: #0D0D0D;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 9999;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .github-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #9A9292;
+    letter-spacing: 0.05em;
+  }
+
+  .github-legend-block {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+  }
+
+  .github-stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  .github-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .github-stat-value {
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    color: #6B1E2E;
+  }
+
+  .github-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #9A9292;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .github-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .github-calendar-wrapper { padding: 16px; }
+    .github-day-labels { padding-right: 6px; min-width: 22px; }
+    .github-day-label { font-size: 8px; height: 8px; line-height: 8px; }
+    .github-month-label { font-size: 9px; }
+    .github-stats { flex-wrap: wrap; gap: 30px; }
+    .github-stat-value { font-size: 26px; }
+  }
+
   /* CONTACT */
   .contact {
     background: #0D0D0D;
     color: #F2EEE9;
-    padding: 100px 5%;
-    border-top: 1px solid rgba(107,30,46,0.2);
     position: relative;
-    z-index: 10;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-bottom: 100px;
   }
 
-  .contact-title {
+  .contact-big-title {
+    overflow: hidden;
+    padding: 60px 0 0;
+    margin: 0;
+  }
+
+  .contact-ticker {
+    display: flex;
+    white-space: nowrap;
+    width: max-content;
+    animation: contactScroll 35s linear infinite;
+  }
+
+  .contact-ticker span {
     font-family: 'Anton', sans-serif;
-    font-size: clamp(36px, 5vw, 56px);
+    font-size: clamp(160px, 35vw, 500px);
+    font-weight: 400;
+    line-height: 0.85;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #6B1E2E;
+    transform: scaleY(1.15);
+    padding-right: 60px;
+    opacity: 1;
+  }
+
+  @keyframes contactScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .contact-content {
+    position: relative;
+    z-index: 2;
+    margin-top: -180px;
+    padding: 0 5%;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #351018;
+    border-radius: 20px;
+    padding: 50px;
+  }
+
+  .contact-heading {
+    margin-bottom: 40px;
+  }
+
+  .contact-heading h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
     font-weight: 400;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
+    color: #F2EEE9;
   }
 
-  .contact-sub {
-    font-size: 16px;
-    line-height: 1.6;
+  .contact-heading p {
+    font-size: 14px;
     color: #9A9292;
-    margin-bottom: 60px;
-    max-width: 600px;
   }
 
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
   }
 
   .contact-links {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
 
   .contact-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px;
-    border: 1px solid rgba(107,30,46,0.2);
-    border-radius: 12px;
+    padding: 18px 20px;
+    border: 1px solid rgba(107,30,46,0.3);
+    border-radius: 10px;
     color: #F2EEE9;
     text-decoration: none;
+    background: rgba(107,30,46,0.08);
     transition: all 0.3s ease;
   }
 
   .contact-card:hover {
-    background: rgba(107,30,46,0.08);
+    background: rgba(107,30,46,0.15);
+    border-color: #6B1E2E;
+    transform: translateY(-2px);
   }
 
   .card-label {
@@ -1233,25 +1506,21 @@
     color: #9A9292;
   }
 
-  .card-value {
-    font-size: 16px;
-    font-weight: 600;
-  }
-
   .social-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+    fill: #F2EEE9;
+    transition: fill 0.3s ease;
   }
 
   .contact-card:hover .social-icon {
-    transform: scale(1.2);
+    fill: #6B1E2E;
   }
 
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 
   .form-group {
@@ -1261,22 +1530,24 @@
   }
 
   .form-group label {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #9A9292;
   }
 
   .form-group input,
   .form-group textarea {
-    background: transparent;
-    border: 1px solid rgba(107,30,46,0.2);
-    border-radius: 8px;
-    padding: 16px;
-    font-size: 16px;
+    background: rgba(107,30,46,0.08);
+    border: none;
+    border-bottom: 2px solid rgba(107,30,46,0.3);
+    border-radius: 8px 8px 0 0;
+    padding: 14px 16px;
+    font-size: 14px;
     color: #F2EEE9;
     font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
   }
 
   .form-group input::placeholder,
@@ -1287,12 +1558,13 @@
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #6B1E2E;
+    border-bottom-color: #6B1E2E;
+    background: rgba(107,30,46,0.12);
   }
 
   .form-group textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
   }
 
   .submit-btn {
@@ -1302,38 +1574,22 @@
     gap: 10px;
     padding: 16px 32px;
     border-radius: 50px;
-    border: 1px solid #fff;
-    background: transparent;
-    color: #F2EEE9;
+    border: none;
+    background: #F2EEE9;
+    color: #0D0D0D;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     width: fit-content;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .submit-btn::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: #fff;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 0.4s ease;
-    z-index: -1;
-  }
-
-  .submit-btn:hover::before {
-    transform: scaleY(1);
-    transform-origin: top;
+    margin-top: 10px;
   }
 
   .submit-btn:hover {
-    color: #0D0D0D;
+    background: #6B1E2E;
+    color: #F2EEE9;
   }
 
   /* FOOTER */
@@ -1550,10 +1806,6 @@
       <h2 class="about-title">ABOUT ME</h2>
     </div>
     <div class="about-grid">
-      <div class="slide-from-left">
-        <div class="portrait">Portrait Photo</div>
-        <div class="portrait-name">N.S. Yashodya Rathnayaka</div>
-      </div>
       <div class="about-text">
         <h2 class="slide-from-left">I TURN WILD IDEAS INTO THINGS YOU CAN CLICK, PLAY WITH & EXPERIENCE.</h2>
         <div class="bio-grid slide-from-left">
@@ -1561,6 +1813,10 @@
           <p>I explore the space between technology, creativity and human problems — building things with code, experimenting with AI and constantly asking: "What if we could build this?"</p>
           <p>From healthcare technology to AI experiments and interactive experiences, I enjoy creating projects that are not just functional, but meaningful.</p>
         </div>
+      </div>
+      <div class="slide-from-left">
+        <div class="portrait">Portrait Photo</div>
+        <div class="portrait-name">N.S. Yashodya Rathnayaka</div>
       </div>
     </div>
   </section>
@@ -1735,44 +1991,87 @@
     </div>
   </section>
 
+
+  <!-- GITHUB ACTIVITY -->
+  <section class="github-section" id="github">
+    <div class="github-header">
+      <h2>GITHUB <span>ACTIVITY</span></h2>
+      <a href="https://github.com/SeminiRathnayaka" class="github-link" target="_blank">View GitHub &#8599;</a>
+    </div>
+    <p class="github-subtitle">Tracking the code, experiments, and ideas I build every day.</p>
+    <div class="github-calendar-wrapper">
+      <div class="github-loading" id="githubLoading">Loading contribution data...</div>
+      <div class="github-graph-area" id="githubGraphArea" style="display:none;">
+        <div class="github-day-labels" id="githubDayLabels"></div>
+        <div class="github-graph-right">
+          <div class="github-months-row" id="githubMonthsRow"></div>
+          <div class="github-weeks-row" id="githubWeeksRow"></div>
+        </div>
+      </div>
+      <div class="github-legend" id="githubLegend" style="display:none;">
+        <span>Less</span>
+        <div class="github-legend-block" style="background:#1a0a0d;"></div>
+        <div class="github-legend-block" style="background:#3d1520;"></div>
+        <div class="github-legend-block" style="background:#6B1E2E;"></div>
+        <div class="github-legend-block" style="background:#9e3048;"></div>
+        <div class="github-legend-block" style="background:#c94562;"></div>
+        <span>More</span>
+      </div>
+    </div>
+    <div class="github-stats" id="githubStats"></div>
+  </section>
+  <div class="github-day-tip" id="githubTip"></div>
+
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2 class="contact-title slide-from-left">GOT A CRAZY IDEA?</h2>
-    <p class="contact-sub slide-from-left">Let's make it exist.</p>
-    <div class="contact-grid">
-      <div class="contact-links slide-from-left">
-        <a href="mailto:seminirathnayaka.yt@gmail.com" class="contact-card">
-          <span class="card-label">Email me</span>
-          <span class="card-value">seminirathnayaka.yt@gmail.com</span>
-        </a>
-        <a href="https://github.com/SeminiRathnayaka" class="contact-card" target="_blank">
-          <span class="card-label">GitHub</span>
-          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/semini-rathnayaka-07a72b393" class="contact-card" target="_blank">
-          <span class="card-label">LinkedIn</span>
-          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/nsy_rathnayaka_/" class="contact-card" target="_blank">
-          <span class="card-label">Instagram</span>
-          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
+    <div class="contact-big-title">
+      <div class="contact-ticker">
+        <span>CONTACT</span><span>CONTACT</span><span>CONTACT</span><span>CONTACT</span><span>CONTACT</span><span>CONTACT</span>
+        <span>CONTACT</span><span>CONTACT</span><span>CONTACT</span><span>CONTACT</span><span>CONTACT</span><span>CONTACT</span>
       </div>
-      <form class="contact-form slide-from-left">
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" placeholder="Your name">
+    </div>
+    <div class="contact-content">
+      <div class="contact-inner">
+        <div class="contact-heading">
+          <h2>GOT A CRAZY IDEA?</h2>
+          <p>Let's make it exist.</p>
         </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="your@email.com">
+        <div class="contact-grid">
+          <div class="contact-links">
+            <a href="mailto:seminirathnayaka.yt@gmail.com" class="contact-card">
+              <span class="card-label">Email me</span>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a href="https://github.com/SeminiRathnayaka" class="contact-card" target="_blank">
+              <span class="card-label">GitHub</span>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/semini-rathnayaka-07a72b393" class="contact-card" target="_blank">
+              <span class="card-label">LinkedIn</span>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/nsy_rathnayaka_/" class="contact-card" target="_blank">
+              <span class="card-label">Instagram</span>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label>NAME</label>
+              <input type="text" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label>EMAIL</label>
+              <input type="email" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label>MESSAGE</label>
+              <textarea placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">SEND</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Tell me about your project..."></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message →</button>
-      </form>
+      </div>
     </div>
   </section>
 
@@ -2012,6 +2311,194 @@
 
     window.addEventListener('scroll', checkScrollPosition);
     checkScrollPosition();
+
+    // CONTACT SCROLL ANIMATION - big title fades in, content slides up over it
+    const contactBigTitle = document.querySelector('.contact-big-title');
+    const contactContent = document.querySelector('.contact-content');
+
+    if (contactBigTitle && contactContent) {
+      gsap.fromTo(contactContent,
+        { opacity: 0, y: 120 },
+        {
+          scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 70%',
+            end: 'top 10%',
+            scrub: 1,
+          },
+          opacity: 1,
+          y: 0
+        }
+      );
+    }
+
+
+    // GITHUB CONTRIBUTION CALENDAR
+    (async function() {
+      const graphArea = document.getElementById('githubGraphArea');
+      const loading = document.getElementById('githubLoading');
+      const legend = document.getElementById('githubLegend');
+      const monthsRow = document.getElementById('githubMonthsRow');
+      const weeksRow = document.getElementById('githubWeeksRow');
+      const dayLabels = document.getElementById('githubDayLabels');
+      const stats = document.getElementById('githubStats');
+      const tip = document.getElementById('githubTip');
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      const labelDays = [1, 3, 5]; // Mon, Wed, Fri
+
+      try {
+        const resp = await fetch('https://github-contributions-api.jogruber.de/v4/SeminiRathnayaka');
+        if (!resp.ok) throw new Error('API error');
+        const data = await resp.json();
+        const contributions = data.contributions || [];
+        const totalThisYear = data.total || contributions.reduce((s, c) => s + c.count, 0);
+
+        loading.style.display = 'none';
+        graphArea.style.display = 'flex';
+        legend.style.display = 'flex';
+
+        // Filter to latest 12 months
+        const now = new Date();
+        const twelveMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 11, 1);
+        const filtered = contributions.filter(c => {
+          const d = new Date(c.date + 'T00:00:00');
+          return d >= twelveMonthsAgo && d <= now;
+        });
+
+        if (filtered.length === 0) {
+          loading.textContent = 'No recent contribution data available.';
+          loading.style.display = 'block';
+          graphArea.style.display = 'none';
+          legend.style.display = 'none';
+          return;
+        }
+
+        // Build contribution map: include ALL days in range (even zero-contribution days)
+        const contribMap = {};
+        const rangeStart = new Date(twelveMonthsAgo);
+        const rangeEnd = new Date(now);
+        for (let d = new Date(rangeStart); d <= rangeEnd; d.setDate(d.getDate() + 1)) {
+          const dateStr = d.toISOString().split('T')[0];
+          contribMap[dateStr] = 0;
+        }
+        contributions.forEach(c => {
+          if (contribMap.hasOwnProperty(c.date)) {
+            contribMap[c.date] = c.count;
+          }
+        });
+
+        // Find the Sunday on or before the first contribution date
+        const firstDate = new Date(filtered[0].date + 'T00:00:00');
+        const start = new Date(firstDate);
+        start.setDate(start.getDate() - start.getDay()); // Go back to Sunday
+
+        // Find the Saturday on or after the last contribution date
+        const lastDate = new Date(now);
+        const end = new Date(lastDate);
+        end.setDate(end.getDate() + (6 - end.getDay())); // Go forward to Saturday
+
+        // Build all weeks from start to end
+        const allWeeks = [];
+        let cursor = new Date(start);
+        while (cursor <= end) {
+          const week = [];
+          for (let d = 0; d < 7; d++) {
+            const dateStr = cursor.toISOString().split('T')[0];
+            const inRange = dateStr in contribMap;
+            const count = inRange ? contribMap[dateStr] : null;
+            week.push({ date: dateStr, count: count, dayOfWeek: d });
+            cursor.setDate(cursor.getDate() + 1);
+          }
+          allWeeks.push(week);
+        }
+
+        // Render day labels (Mon, Wed, Fri)
+        dayLabels.innerHTML = '';
+        for (let d = 0; d < 7; d++) {
+          if (labelDays.includes(d)) {
+            const lbl = document.createElement('div');
+            lbl.className = 'github-day-label';
+            lbl.textContent = dayNames[d].substring(0, 3);
+            dayLabels.appendChild(lbl);
+          } else {
+            const spacer = document.createElement('div');
+            spacer.style.height = '11px';
+            dayLabels.appendChild(spacer);
+          }
+        }
+
+        // Render month labels — each spans its weeks' width
+        monthsRow.innerHTML = '';
+        let lastMonthIdx = -1;
+        const totalWeeks = allWeeks.length;
+
+        // Group weeks by month
+        const monthGroups = [];
+        allWeeks.forEach((week) => {
+          const m = new Date(week[0].date + 'T00:00:00').getMonth();
+          if (m !== lastMonthIdx) {
+            monthGroups.push({ month: m, year: new Date(week[0].date + 'T00:00:00').getFullYear(), weeks: 1 });
+            lastMonthIdx = m;
+          } else {
+            monthGroups[monthGroups.length - 1].weeks++;
+          }
+        });
+
+        monthGroups.forEach(mg => {
+          const label = document.createElement('div');
+          label.className = 'github-month-label';
+          label.textContent = monthNames[mg.month] + ' ' + mg.year;
+          label.style.width = ((mg.weeks / totalWeeks) * 100) + '%';
+          monthsRow.appendChild(label);
+        });
+
+        // Render week columns
+        weeksRow.innerHTML = '';
+        allWeeks.forEach(week => {
+          const weekEl = document.createElement('div');
+          weekEl.className = 'github-week-col';
+          week.forEach(day => {
+            const el = document.createElement('div');
+            el.className = 'github-day';
+            if (day.count === null) {
+              el.style.visibility = 'hidden';
+            } else {
+              const level = day.count === 0 ? 0 : day.count <= 2 ? 1 : day.count <= 5 ? 2 : day.count <= 8 ? 3 : 4;
+              el.className = 'github-day level-' + level;
+              const dateObj = new Date(day.date + 'T00:00:00');
+              el.addEventListener('mouseenter', (e) => {
+                tip.style.display = 'block';
+                tip.textContent = day.count + ' contribution' + (day.count !== 1 ? 's' : '') + ' on ' + dayNames[dateObj.getDay()] + ', ' + monthNames[dateObj.getMonth()] + ' ' + dateObj.getDate() + ', ' + dateObj.getFullYear();
+              });
+              el.addEventListener('mousemove', (e) => {
+                tip.style.left = e.clientX + 12 + 'px';
+                tip.style.top = e.clientY - 40 + 'px';
+              });
+              el.addEventListener('mouseleave', () => {
+                tip.style.display = 'none';
+              });
+            }
+            weekEl.appendChild(el);
+          });
+          weeksRow.appendChild(weekEl);
+        });
+
+        // Stats
+        const recentContributions = filtered.reduce((s, c) => s + c.count, 0);
+        const activeDays = filtered.filter(c => c.count > 0).length;
+        const maxDay = Math.max(...filtered.map(c => c.count));
+
+        stats.innerHTML = '' +
+          '<div class="github-stat"><span class="github-stat-value">' + recentContributions.toLocaleString() + '</span><span class="github-stat-label">Contributions<br>THIS YEAR</span></div>' +
+          '<div class="github-stat"><span class="github-stat-value">' + activeDays + '</span><span class="github-stat-label">Active days</span></div>' +
+          '<div class="github-stat"><span class="github-stat-value">' + maxDay + '</span><span class="github-stat-label">Best day</span></div>';
+
+      } catch (err) {
+        loading.textContent = 'Could not load GitHub data. Visit the profile directly.';
+        console.error('GitHub API error:', err);
+      }
+    })();
 
     // PROJECT CARDS SCROLL REVEAL
     document.querySelectorAll('.project-card').forEach((card, i) => {
